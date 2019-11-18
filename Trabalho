@@ -1,0 +1,64 @@
+package lista;
+
+import java.util.Scanner;
+
+public class Metodos {
+	//inserir novo restaurantes
+//listar todos os restaurantes
+	//buscar e listar restaurantes com base na comida
+	Scanner scan = new Scanner(System.in);
+	private int tamLog = 7;
+	private Restaurante restaurantes[] = new Restaurante[10];{
+	restaurantes[0] = new Restaurante("Brasileirinho","","brasileira",3);
+	restaurantes[1] = new Restaurante("Yan Ping","","chinesa",1);
+	restaurantes[2] = new Restaurante("Casa do Camar�o","","brasileira",1);
+	restaurantes[3] = new Restaurante("Churrasco da Casa","","brasileira",2);
+	restaurantes[4] = new Restaurante("Pasta d'Italia","","italiana",4);
+	restaurantes[5] = new Restaurante("Teriyaki House","","chinesa",4);
+	restaurantes[6] = new Restaurante("Chateau d'Plume","","francesa",5);
+	}
+	public Restaurante inicializarRestaurante(){
+		System.out.println("Informe o nome do restaurante: ");
+		String nome = scan.nextLine();
+		System.out.println("Informe o endereço do restaurante: ");
+		String endereço = scan.nextLine();
+		System.out.println("Informe o tipo de comida do restaurante: ");
+		String comida = scan.nextLine();
+		System.out.println("Informe a quantidade de estrelas (0-5) do restaurante: ");
+		int nota = scan.nextInt();
+		Restaurante restaurante = new Restaurante(nome, endereço, comida, nota);
+		scan.nextLine();
+		return restaurante;
+	}
+	public void inserirRestaurante(Restaurante restaurante){
+		this.restaurantes[tamLog] = restaurante;
+		tamLog++;
+	}
+	public void listarRestaurantes(){
+		System.out.println("LISTA DE RESTAURANTES.");
+		System.out.println("\n");
+		for (int i = 0; i < tamLog; i++){
+			System.out.println(restaurantes[i].toString());
+		}
+		System.out.println("\n");
+	}
+	public void buscarRestaurantes(){
+		System.out.println("Informe o tipo de comida que deseja:"
+				+ "\nbrasileira"
+				+ "\nchinesa"
+				+ "\nitaliana"
+				+ "\nfrancesa");
+		String comida = scan.nextLine();
+		System.out.println("LISTA DE RESTAURANTES POR COMIDA.");
+		System.out.println(" Todos os restaurantes abaixo"
+				          +"\n Fornecem comida " + comida + ".");
+		System.out.println("\n");
+		for (int i = 0; i < tamLog; i++){
+			if (restaurantes[i].getComida().equalsIgnoreCase(comida)){
+				System.out.println(restaurantes[i].toString());
+			}
+		}
+		System.out.println("\n");
+	}
+	
+}

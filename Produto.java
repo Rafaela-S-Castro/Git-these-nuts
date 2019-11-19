@@ -8,6 +8,27 @@ public class Produto {
 	private int codigo;
 
 	// inicializarProduto
+	public Produto() {
+		super();
+		this.tamanho = "";
+		this.cor = "";
+		this.preco = 0;
+		this.tip = "";
+		this.genero = ' ';
+		this.codigo = 0;
+	
+	}
+	
+	public Produto(String tamanho, String cor, float preco, String tip, char genero, int codigo) {
+		super();
+		this.tamanho = tamanho;
+		this.cor = cor;
+		this.preco = preco;
+		this.tip = tip;
+		this.genero = genero;
+		this.codigo = codigo;
+	}
+
 	public String getTamanho() {
 		return tamanho;
 	}
@@ -61,5 +82,7 @@ public class Produto {
 		return "Produto [tamanho=" + tamanho + ", cor=" + cor + ", preco=" + preco + ", tip=" + tip + ", genero="
 				+ genero + ", codigo=" + codigo + "]";
 	}
+
+
 
 }

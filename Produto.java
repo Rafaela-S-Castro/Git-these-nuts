@@ -1,26 +1,18 @@
-package TrabalhoC3;
-/*Rafaela Silva de Castro
- * Ana Clara Herbst
- * Lucas Anjos
- * Luciano
- */
+
 public class Produto {
-	private char tamanho;
+	private String tamanho;
 	private String cor;
-	private double preco;
+	private float preco;
+	private String tip;
+	private char genero;
+	private int codigo;
 
-	public Produto(char tamanho, String cor, double preco) {
-		super();
-		this.tamanho = tamanho;
-		this.cor = cor;
-		this.preco = preco;
-	}
-
-	public char getTamanho() {
+	// inicializarProduto
+	public String getTamanho() {
 		return tamanho;
 	}
 
-	public void setTamanho(char tamanho) {
+	public void setTamanho(String tamanho) {
 		this.tamanho = tamanho;
 	}
 
@@ -32,12 +24,42 @@ public class Produto {
 		this.cor = cor;
 	}
 
-	public double getPreco() {
+	public float getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(float preco) {
 		this.preco = preco;
+	}
+
+	public String getTip() {
+		return tip;
+	}
+
+	public void setTip(String tip) {
+		this.tip = tip;
+	}
+
+	public char getGenero() {
+		return genero;
+	}
+
+	public void setGenero(char genero) {
+		this.genero = genero;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	@Override
+	public String toString() {
+		return "Produto [tamanho=" + tamanho + ", cor=" + cor + ", preco=" + preco + ", tip=" + tip + ", genero="
+				+ genero + ", codigo=" + codigo + "]";
 	}
 
 }

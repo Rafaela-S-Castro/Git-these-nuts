@@ -1,4 +1,4 @@
-
+//codigo em extended info abaixo
 public class Estoque {
 	//Produto[]
 			// int tamLogico
